@@ -247,7 +247,7 @@ jobs:
             - Create clear, atomic commits for changes
             - If unsure about complexity, lean toward using TaskMaster for organization
             - Always test your changes if possible
-          claude_args: "--max-turns 100 --dangerously-skip-permissions --allowed-tools mcp__taskmaster-ai__*,Edit,MultiEdit,Glob,Grep,Read,Write,Bash,TodoWrite,mcp__github__*,Bash(gh*)"
+          claude_args: "--max-turns 100 --dangerously-skip-permissions"
         env:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

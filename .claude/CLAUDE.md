@@ -83,6 +83,7 @@ Required in GitHub Actions:
 env:
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # For gh CLI authentication
   PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }} # Optional
 ```
 
@@ -140,8 +141,15 @@ What's the next task and can you implement it?
 - Check GITHUB_TOKEN permissions
 - Verify Claude Code app is installed
 - Check workflow logs in Actions tab
+- Ensure GH_TOKEN is set for gh CLI commands
 
 ### Tasks not executing
 - Verify dependencies are met
 - Check TaskMaster initialization
 - Review task status in GitHub issues
+
+### Linear Integration (Optional)
+- If you have Linear's GitHub Issues Sync configured
+- GitHub issues will automatically sync to Linear
+- No additional API keys or configuration needed
+- Status updates sync bidirectionally
