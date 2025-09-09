@@ -62,6 +62,7 @@ Pure TaskMaster execution for sequential task processing.
 ### GitHub Integration
 - PRD goes in issue description
 - Each TaskMaster task becomes a GitHub sub-issue
+- **CRITICAL**: All sub-issues MUST start with "@claude - " to trigger automation
 - Reference issues in commits: "Closes #XX"
 - Link all PRs to parent issues
 

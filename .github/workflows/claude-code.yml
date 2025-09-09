@@ -231,7 +231,8 @@ jobs:
             2. Update THIS GitHub issue (#${{ github.event.issue.number }}) description with PRD:
                Run via Bash tool: GH_TOKEN=$GITHUB_TOKEN gh issue edit ${{ github.event.issue.number }} --body "..."
             3. Create GitHub sub-issues for each task:
-               Run via Bash tool: GH_TOKEN=$GITHUB_TOKEN gh issue create --title "[Task #X] title" --body "..." --label "taskmaster-subtask"
+               CRITICAL: Always include @claude mention in sub-issue body to trigger automation!
+               Run via Bash tool: GH_TOKEN=$GITHUB_TOKEN gh issue create --title "[Task #X] title" --body "@claude - [task description here]" --label "taskmaster-subtask"
             4. Add a comment with task mapping table:
                Run via Bash tool: GH_TOKEN=$GITHUB_TOKEN gh issue comment ${{ github.event.issue.number }} --body "..."
             5. Execute tasks sequentially with mcp__taskmaster-ai__next_task

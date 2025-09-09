@@ -55,7 +55,9 @@ EOF
 for task in tasks; do
   SUB_ISSUE_URL=$(GH_TOKEN=$GITHUB_TOKEN gh issue create \
     --title "[Task #$task.id] $task.title" \
-    --body "## Parent Issue: #$PARENT_ISSUE
+    --body "@claude - Please implement this task:
+
+## Parent Issue: #$PARENT_ISSUE
 
 ### Task Details
 $task.description
